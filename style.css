@@ -1,0 +1,39 @@
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+}
+.result{
+    height: 100px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.bouton{
+    border: 2px solid black;
+    margin: 5px;
+    height: 350px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+#zero{
+    width: 165px;
+}
+
+input{
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    font-size: larger;
+}
