@@ -26,17 +26,17 @@ function raz(){
     stock = "";
 }
 
-function calculerResultat(){
+// function calculerResultat(){
 
-    let nbrNombre = tabNbr.length;
-    let nbrOperation = tabOperation.length ;
+//     let nbrNombre = tabNbr.length;
+//     let nbrOperation = tabOperation.length ;
 
-    if ( nbrOperation == 0){
-        resultat.innerHTML = tabNbr[0];
-    }else if (nbrNombre == nbrOperation - 1 ){
-        resultat.innerHTML = "att chwiya "
-    }
-}
+//     if ( nbrOperation == 0){
+//         resultat.innerHTML = tabNbr[0];
+//     }else if (nbrNombre == nbrOperation - 1 ){
+//         resultat.innerHTML = "att chwiya "
+//     }
+// }
 
 
 allInput.forEach((input) => {
