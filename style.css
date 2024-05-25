@@ -3,28 +3,36 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 0px;
 }
 .container{
     width: 400px;
     height: 500px;
     border: 2px solid black;
+    box-shadow: 0px 0px 5px 0px;
 }
 .result{
     height: 100px;
     border: 2px solid black;
     margin: 5px;
+    box-shadow: 0px 0px 8px 0px;
+    text-align: right;
+    font-size: x-large;
+
+
 }
 
 .bouton{
     border: 2px solid black;
     margin: 5px;
-    height: 350px;
+    height: 360px;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
+    box-shadow: 0px 0px 5px 0px;
 
 }
 #zero{
@@ -36,4 +44,6 @@ input{
     height: 50px;
     margin: 10px;
     font-size: larger;
+    box-shadow: 0px 0px 4px 0px;
+    border-radius: 100%;
 }
