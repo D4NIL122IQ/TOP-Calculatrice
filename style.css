@@ -1,28 +1,33 @@
 
 body{
+    background-color: #9fa6e1;
     display: flex;
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 0px 0px;
 }
 .container{
+    background-color: #b5bad3;
     width: 400px;
     height: 500px;
     border: 2px solid black;
     box-shadow: 0px 0px 5px 0px;
 }
 .result{
+    background-color: #b5bad3;
     height: 100px;
     border: 2px solid black;
     margin: 5px;
     box-shadow: 0px 0px 8px 0px;
     text-align: right;
     font-size: x-large;
-
-
+}
+.egal{
+    text-align: right;
 }
 
 .bouton{
+    background-color: #cabbe7;
     border: 2px solid black;
     margin: 5px;
     height: 360px;
@@ -40,10 +45,15 @@ body{
 }
 
 input{
+    background-color: #c8d1e8;
     width: 70px;
     height: 50px;
     margin: 10px;
     font-size: larger;
     box-shadow: 0px 0px 4px 0px;
     border-radius: 100%;
+}
+
+input:hover{
+    box-shadow: 0px 0px 10px 0px inset #24294a;
 }

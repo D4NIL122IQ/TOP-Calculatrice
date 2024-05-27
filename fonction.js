@@ -1,6 +1,7 @@
 const allInput = document.querySelectorAll("input")
 const resultat = document.querySelector('.result')
 
+
 let tabNbr= [] ;
 let tabOperation = [];
 let stock = ""
@@ -70,7 +71,7 @@ outerLoop: function calculerResultat(){
             }
         }
 
-        resultat.innerHTML = calcule;
+        resultat.innerHTML += "<br>" +calcule;
     }
         
 }
@@ -89,7 +90,7 @@ allInput.forEach((input) => {
             case "ac":
                 if (stock != "") {
                     resultat.innerHTML = resultat.innerHTML.slice(0,-1);
-                stock = stock.slice(0,-1);
+                    stock = stock.slice(0,-1);
                 }
             
                 break;
@@ -120,9 +121,10 @@ allInput.forEach((input) => {
                 break;
 
             default:  
+                
                 resultat.innerHTML += input.value;
                 stock +=input.value;
-   
+
                 break;
         }
         })
