@@ -5,18 +5,23 @@ let tabNbr= [] ;
 let tabOperation = [];
 let stock = ""
 
-
+resultat.innerHTML = "-21"
+resultat.innerHTML *= "-1"
 function addOperationIntoArray (key){
-    resultat.innerHTML += " " + key + " "
-    tabNbr.push(stock);
-    tabOperation.push(key)
-    stock = ""
+    if (stock !=""){
+     resultat.innerHTML += " " + key + " "
+     tabNbr.push(stock);
+     tabOperation.push(key)
+     stock = ""
+    }else{
+     resultat.innerHTML += " " + key + " "
+     tabOperation.push(key)
+}
 }
 
 function special(value){
     resultat.innerHTML = resultat.innerHTML.slice(0,-(stock.length)) + value
-    tabNbr.push(value);
-    stock = ""
+    stock = value
 }
 
 function raz(){
@@ -30,7 +35,9 @@ function calculerResultat(){
     let nbrNombre = tabNbr.length;
     let nbrOperation = tabOperation.length ;
 
-    if ( nbrOperation == 0){
+    if (nbrNombre <= nbrOperation) {
+        resultat.innerHTML = "erreur"
+    } else  if ( nbrOperation == 0){
         resultat.innerHTML = tabNbr[0];
     }else if (nbrNombre - 1 == nbrOperation ){
         resultat.innerHTML = tabNbr[0];
@@ -54,7 +61,10 @@ function calculerResultat(){
             }   
         }
     }
+        
 }
+   
+
 
 
 allInput.forEach((input) => {
