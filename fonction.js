@@ -9,14 +9,14 @@ let stock = ""
 
 function addOperationIntoArray (key){
     if (stock !=""){
-     resultat.innerHTML += " " + key + " "
-     tabNbr.push(stock);
-     tabOperation.push(key)
-     stock = ""
+        resultat.innerHTML += " " + key + " "
+        tabNbr.push(stock);
+        tabOperation.push(key)
+        stock = ""
     }else{
-     resultat.innerHTML += " " + key + " "
-     tabOperation.push(key)
-}
+        resultat.innerHTML += " " + key + " "
+        tabOperation.push(key)
+    }
 }
 
 function special(value){
@@ -30,23 +30,22 @@ function raz(){
     stock = "";
 }
 
-outerLoop: function calculerResultat(){
+function calculerResultat(){
 
     let nbrNombre = tabNbr.length;
     let nbrOperation = tabOperation.length ;
 
     if (nbrNombre <= nbrOperation) {
-        resultat.innerHTML = "erreur trop d'operateur"
+        resultat.innerHTML = "<br> erreur syntaxe"
 
     } else  if ( nbrOperation == 0){
-        resultat.innerHTML = tabNbr[0];
+        resultat.innerHTML = "<br>" + tabNbr[0];
 
     }else if (nbrNombre - 1 == nbrOperation ){
         let calcule = tabNbr[0];
         let divZero = false; 
 
         for (let i = 0; i < nbrOperation; i++) {
-            
             switch (tabOperation[i]) {
                 case "-":
                  calcule -= tabNbr[i+1];
@@ -58,7 +57,7 @@ outerLoop: function calculerResultat(){
                     if(tabNbr[i+1] != "0"){
                      calcule/= tabNbr[i+1];
                     }else{
-                     calcule = "erreur multiplication par 0";
+                     calcule = "<br>erreur multiplication par 0";
                      divZero = true;
                     }
                     break;
@@ -70,13 +69,10 @@ outerLoop: function calculerResultat(){
                 break;
             }
         }
-
         resultat.innerHTML += "<br>" +calcule;
     }
         
 }
-   
-
 
 
 allInput.forEach((input) => {
@@ -86,13 +82,11 @@ allInput.forEach((input) => {
                 resultat.innerHTML = "";
                 raz();
                 break;
-
             case "ac":
                 if (stock != "") {
                     resultat.innerHTML = resultat.innerHTML.slice(0,-1);
                     stock = stock.slice(0,-1);
                 }
-            
                 break;
             case "+": 
                 addOperationIntoArray("+");
@@ -120,11 +114,9 @@ allInput.forEach((input) => {
                 special(-(stock));
                 break;
 
-            default:  
-                
+            default:    
                 resultat.innerHTML += input.value;
                 stock +=input.value;
-
                 break;
         }
         })

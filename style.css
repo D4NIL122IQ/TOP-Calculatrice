@@ -1,6 +1,11 @@
+/* .color1 {color: #2e3445;}
+.color2 {color: #5c606c;}
+.color3 {color: #919195;}
+.color4 {color: #c3c3c4;}
+.color5 {color: #f0f1f2;} */
 
 body{
-    background-color: #9fa6e1;
+    background-color: #c3c3c4;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,20 +19,20 @@ body{
     box-shadow: 0px 0px 5px 0px;
 }
 .result{
-    background-color: #b5bad3;
+    background-color: #2e3445;
     height: 100px;
     border: 2px solid black;
     margin: 5px;
     box-shadow: 0px 0px 8px 0px;
     text-align: right;
     font-size: x-large;
+    color: white;
 }
 .egal{
     text-align: right;
 }
-
 .bouton{
-    background-color: #cabbe7;
+    background-color: #919195;
     border: 2px solid black;
     margin: 5px;
     height: 360px;
@@ -43,9 +48,8 @@ body{
 #zero{
     width: 165px;
 }
-
 input{
-    background-color: #c8d1e8;
+    background-color: #f0f1f2;
     width: 70px;
     height: 50px;
     margin: 10px;
@@ -53,7 +57,6 @@ input{
     box-shadow: 0px 0px 4px 0px;
     border-radius: 100%;
 }
-
 input:hover{
     box-shadow: 0px 0px 10px 0px inset #24294a;
 }
